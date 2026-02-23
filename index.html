@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+<!-- Animated Network Background -->
+<canvas id="network-canvas" class="network-background" style="display: none;"></canvas>
+<button class="sidebar-toggle" aria-label="Toggle navigation">
+    <i class="fas fa-bars"></i>
+</button>
+
+<nav class="sidebar" data-collapsed="false">
+    <div class="sidebar-header">
+        <h3>My Portfolio</h3>
+        <button class="sidebar-toggle close-btn" aria-label="Toggle navigation">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+    </div>
+    <ul>
+        <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i><span>Home</span></a></li>
+        <li><a href="#about" class="nav-link"><i class="fas fa-user"></i><span>About</span></a></li>
+        <li><a href="#experience" class="nav-link"><i class="fas fa-briefcase"></i><span>Experience</span></a></li>
+        <li><a href="#skills" class="nav-link"><i class="fas fa-cogs"></i><span>Skills</span></a></li>
+        <li><a href="#achievements" class="nav-link"><i class="fas fa-trophy"></i><span>Certifications & Achievements</span></a></li>
+        <li><a href="#projects" class="nav-link"><i class="fas fa-project-diagram"></i><span>Projects</span></a></li>
+        <li><a href="#extra-curricular" class="nav-link"><i class="fas fa-basketball-ball"></i><span>Activities</span></a></li>
+        <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+    </ul>
+</nav>
+
+<main id="main-content">
+    <!-- Home Section -->
+    <section id="home" class="full-screen">
+        <div class="hero-content">
+            <h2 class="hero-name" data-aos="fade-down">Omkar V Kurane</h2>
+            <p class="hero-subtitle" data-aos="fade-down" data-aos-delay="100">
+                Full Stack Developer<br>
+                <span class="college-name">Maratha Mandal Engineering College, Belagavi</span>
+            </p>
+            <img src="profile-image.png" alt="Profile Image" class="profile-image" data-aos="zoom-in">
+            <h1 data-aos="fade-up">Welcome to my Portfolio</h1>
+            <p class="hero-tagline" data-aos="fade-up">I'm a <span class="typing"></span></p>
+            
+            <div class="hero-social-links" data-aos="fade-up" data-aos-delay="100">
+                <a href="https://www.linkedin.com/in/omkar-kurane-66594425b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/om-kar444" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" target="_blank" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            
+            <a href="Resume.pdf" class="btn" download data-aos="fade-up" data-aos-delay="200">
+                Download Resume
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title" data-aos="fade-right">About Me</h2>
+        <div class="about-container">
+            <p class="intro" data-aos="fade-up">
+                I am <strong>Omkar Kurane</strong>, an engineering aspirant passionate about innovation,
+                problem-solving, and continuous learning. I believe in creating, experimenting, failing,
+                rebuilding, and ultimately succeeding. My approach to growth is rooted in learning by doing,
+                embracing trial and error as a pathway to mastery.
+            </p>
+
+            <p class="intro" data-aos="fade-up" data-aos-delay="100">
+                Currently, I am focused on <strong>AI-driven projects</strong> that address real-world
+                challenges, with a strong interest in sectors such as <strong>healthcare</strong> and
+                <strong>education</strong>. My goal is to leverage technology to create impactful solutions
+                that improve lives and drive progress.
+            </p>
+
+            <p class="intro" data-aos="fade-up" data-aos-delay="200">
+                Some of these initiatives are highlighted in my <a href="#projects">Projects</a> section,
+                reflecting my commitment to using engineering and AI to make a meaningful difference.
+            </p>
+
+            <div class="details-grid">
+                <div class="detail-card" data-aos="fade-up" data-aos-delay="100"><h3>Name</h3><p>Omkar V Kurane</p></div>
+                <div class="detail-card" data-aos="fade-up" data-aos-delay="200"><h3>Email</h3><p>omkarkurane141@gmail.com</p></div>
+                <div class="detail-card" data-aos="fade-up" data-aos-delay="300"><h3>Location</h3><p>Belagavi,Karnataka,India</p></div>
+                <div class="detail-card facts" data-aos="fade-up" data-aos-delay="400">
+                    <h3>Interesting Facts About Me</h3>
+                    <ul>
+                        <li>I enjoy cooking and consider myself a simple chef.</li>
+                        <li>I can quickly learn new skills within a week and apply them whenever required.</li>
+                        <li>One interesting fact about me is that my interests evolve as I work on them.</li>
+                        <li>
+                            I usually don't enjoy studies that lack real-world application, but I love building projects
+                            based on real-world scenarios and participating in various events — some of which are listed in my
+                            <a href="#achievements">Achievements & Extracurricular Activities</a>.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience Section -->
+    <section id="experience">
+        <h2 class="section-title" data-aos="fade-right">Professional Experience</h2>
+        <div class="experience-container">
+            <div class="experience-card" data-aos="fade-up">
+                <div class="experience-header">
+                    <h3>Java Full Stack Intern</h3>
+                    <span class="experience-duration">Feb 2026 - Present</span>
+                </div>
+                <p class="company-name">EchoBrains | A Dextris Company</p>
+                <p class="location"><i class="fas fa-map-marker-alt"></i> Onsite - Bangalore, Karnataka, India</p>
+                <p class="experience-description">Working as a Java Full Stack Development Intern, gaining hands-on experience in full-stack technologies and contributing to real-world projects.</p>
+            </div>
+
+            <div class="experience-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="experience-header">
+                    <h3>Full Stack Developer</h3>
+                    <span class="experience-duration">Feb 2026 - Present</span>
+                </div>
+                <p class="company-name">Prinstone Smart Engineers</p>
+                <p class="location"><i class="fas fa-laptop-house"></i> Remote - Bangalore, Karnataka, India</p>
+                <p class="experience-description">Developing full-stack solutions remotely, working on various web development projects and technologies.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title" data-aos="fade-right">My Skills</h2>
+        <div class="skills-container">
+            <!-- Programming Languages -->
+            <div class="skill-category" data-aos="fade-up">
+                <h3>Programming Languages</h3>
+                <ul>
+                    <li>Java</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>SQL</li>
+                </ul>
+            </div>
+
+            <!-- Concepts & Frameworks -->
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                <h3>Concepts & Frameworks</h3>
+                <ul>
+                    <li>Object-Oriented Programming (OOP)</li>
+                    <li>Multithreading</li>
+                    <li>Data Structures & Algorithms (DSA)</li>
+                    <li>Exception Handling</li>
+                    <li>Collections Framework</li>
+                    <li>Java 8</li>
+                    <li>Node.js</li>
+                    <li>DBMS</li>
+                    <li>Machine Learning</li>
+                    <li>Data Visualization</li>
+                    <li>Linux</li>
+                </ul>
+            </div>
+
+            <!-- Tools & IDEs -->
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                <h3>Tools & IDEs</h3>
+                <ul>
+                    <li>IntelliJ IDEA</li>
+                    <li>Visual Studio Code</li>
+                    <li>Anaconda</li>
+                    <li>LaTeX</li>
+                    <li>Flutter</li>
+                    <li>Git & GitHub</li>
+                    <li>Figma</li>
+                </ul>
+            </div>
+
+            <!-- Soft Skills -->
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Leadership & Team Collaboration</li>
+                    <li>Problem-Solving & Analytical Thinking</li>
+                    <li>Effective Communication</li>
+                    <li>Adaptability & Quick Learning</li>
+                </ul>
+            </div>
+
+            <!-- Interests -->
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+                <h3>Interests</h3>
+                <ul>
+                    <li>Tech Events & Hackathons</li>
+                    <li>Cooking & Travelling</li>
+                    <li>Music & Movies</li>
+                </ul>
+            </div>
+
+            <!-- Strengths -->
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="500">
+                <h3>Strengths</h3>
+                <ul>
+                    <li>Problem-Solving & Analytical Mindset</li>
+                    <li>Leadership & Team Collaboration</li>
+                    <li>Adaptability & Quick Learning</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements">
+        <h2 class="section-title" data-aos="fade-right">Certifications & Achievements</h2>
+        <div class="achievements-grid">
+            <!-- Certifications -->
+            <div class="achievement-card" data-aos="fade-up">
+                <i class="fas fa-certificate"></i>
+                <h3>Core Java – ScholarHat</h3>
+                <p>Aug 2024</p>
+            </div>
+
+            <div class="achievement-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-certificate"></i>
+                <h3>Linux Workshop – upGrad @ MMEC</h3>
+                <p>Aug 2024</p>
+            </div>
+
+            <div class="achievement-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-certificate"></i>
+                <h3>Web Development Workshop – upGrad @ MMEC</h3>
+                <p>Aug 2023</p>
+            </div>
+
+            <!-- Hackathons -->
+            <div class="achievement-card" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-code"></i>
+                <h3>Hack to Future '24 – KLS GIT</h3>
+                <p>24-hr Hackathon Participant, Jun 2024</p>
+            </div>
+
+            <div class="achievement-card" data-aos="fade-up" data-aos-delay="400">
+                <i class="fas fa-users"></i>
+                <h3>Clash of Codes '24 – IEEE</h3>
+                <p>Team Lead, Apparel Rental E-commerce, Dec 2024</p>
+            </div>
+
+            <div class="achievement-card" data-aos="fade-up" data-aos-delay="500">
+                <i class="fas fa-chart-line"></i>
+                <h3>Hack to Intern – TechVritti | VTU</h3>
+                <p>Solo Project: Data Visualization Tool, Nov 2024</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title" data-aos="fade-right">Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card" data-aos="fade-up">
+                <div class="project-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="project-info">
+                    <h3>Data Visualization Tool Through ChatBot</h3>
+                    <p class="project-period">Apr 2025 – Jul 2025 | Solo Hackathon</p>
+                    <p class="project-description">Designed an AI-based tool that interprets user queries (e.g., "Percentage of ChatGPT users in India in 2025") to generate dynamic visualizations using real-world datasets and interactive charts.</p>
+                    <div class="tech-stack">
+                        <span>Node.js</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Chart.js</span>
+                        <span>D3.js</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <div class="project-info">
+                    <h3>AI Health Assistant</h3>
+                    <p class="project-period">Jul 2025 | Group Hackathon</p>
+                    <p class="project-description">Built a multilingual, voice-enabled AI assistant for rural healthcare. Included image-based symptom recognition, AI-generated advice, translation, and user-friendly web interface.</p>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>AI/ML APIs</span>
+                        <span>Text-to-Speech</span>
+                        <span>Speech-to-Text</span>
+                        <span>NLP</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="project-info">
+                    <h3>LibSync - Smart Library Automation System</h3>
+                    <p class="project-period">Jul 2025 – Apr 2026 | Final Year Project</p>
+                    <p class="project-description">Developed a mobile app with features like AI-powered smart search, book recommendations, overdue alerts, and inventory tracking. Focused on improving UI/UX.</p>
+                    <div class="tech-stack">
+                        <span>Mobile App</span>
+                        <span>AI Integration</span>
+                        <span>UI/UX Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Extra-Curricular Activities Section -->
+    <section id="extra-curricular">
+        <h2 class="section-title" data-aos="fade-right">Extra-Curricular Activities</h2>
+        <div class="activities-container">
+            <!-- Hackathons -->
+            <div class="activity-card" data-aos="fade-up">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Hackathons</h3>
+                <p>Participated in 4 zonal-level and 1 national-level hackathon, improving skills in rapid prototyping, teamwork, and innovative problem-solving.</p>
+            </div>
+
+            <!-- FKCCI -->
+            <div class="activity-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-briefcase"></i>
+                <h3>FKCCI Manthan</h3>
+                <p>Participated in the Business Plan Competition (Bengaluru), organized by the Federation of Karnataka Chambers of Commerce & Industry (FKCCI).</p>
+            </div>
+
+            <!-- Competitions -->
+            <div class="activity-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-trophy"></i>
+                <h3>Competitions & Events</h3>
+                <ul style="list-style-position: inside; padding: 0; margin: 0; text-align: left; font-size: 0.95rem;">
+                    <li>Winner of college-level cooking and mocktail-making competitions.</li>
+                    <li>Active participant in speech competitions, improving public speaking & persuasive communication.</li>
+                    <li>Participated in <strong>EUREKA Pitching Competition</strong> at MMEC, promoting startup culture (organized by IIT Bombay).</li>
+                </ul>
+            </div>
+
+            <!-- Research Paper -->
+            <div class="activity-card" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-file-alt"></i>
+                <h3>Research Paper Presentation</h3>
+                <p>Participated in National Level Research Paper Presentation Conference organized by VTU in Belagavi.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title" data-aos="fade-right">Get In Touch</h2>
+        <div class="contact-container">
+            <p class="contact-intro" data-aos="fade-up">
+                Have a project in mind or want to collaborate? Feel free to reach out!
+            </p>
+            <form id="contact-form" class="contact-form" data-aos="fade-up" data-aos-delay="100">
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <select id="designation" name="designation" required>
+                            <option value="">Select Your Role</option>
+                            <option value="HR">HR</option>
+                            <option value="Recruiter">Recruiter</option>
+                            <option value="Founder">Founder/CEO</option>
+                            <option value="Student">Student</option>
+                            <option value="Developer">Developer</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn submit-btn">Send Message</button>
+                <p id="form-message" class="form-message"></p>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/omkar-kurane-66594425b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" aria-label="LinkedIn" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/om-kar444" aria-label="GitHub" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="#" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+        <p>&copy; 2024 Omkar Kurane. All Rights Reserved.</p>
+    </footer>
+</main>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="script.js"></script>
+</body>
+</html>
