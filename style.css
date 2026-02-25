@@ -917,10 +917,20 @@ footer {
     .achievements-grid,
     .activities-container {
         grid-template-columns: 1fr;
+        gap: 1rem;
     }
     
     .projects-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .project-info {
+        padding: 1.5rem;
+    }
+    
+    .project-details li {
+        font-size: 0.95rem;
     }
     
     .experience-card {
@@ -936,11 +946,55 @@ footer {
         padding: 0.7rem 1.5rem;
         font-size: 0.95rem;
     }
+    
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .about-container {
+        padding: 0 1rem;
+    }
+    
+    .about-box {
+        padding: 1.5rem;
+    }
+    
+    .about-box p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
 }
 
 @media (max-width: 480px) {
+    section {
+        padding: 3rem 1rem;
+    }
+    
     .hero-name {
         font-size: 1.75rem;
+    }
+    
+    .hero-greeting {
+        font-size: 1.2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+    
+    .college-name {
+        font-size: 0.85rem;
+    }
+    
+    .hero-contact-info {
+        font-size: 0.85rem;
     }
     
     .hero-content h1 {
@@ -948,7 +1002,7 @@ footer {
     }
     
     .hero-tagline {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     
     .section-title {
@@ -957,6 +1011,57 @@ footer {
     
     .sidebar {
         width: 100%;
+    }
+    
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .hero-social-links a {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .about-box {
+        padding: 1.25rem;
+    }
+    
+    .about-box p {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+    
+    .project-info h3 {
+        font-size: 1.2rem;
+    }
+    
+    .project-details li {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    
+    .tech-stack span {
+        font-size: 0.75rem;
+        padding: 4px 10px;
+    }
+    
+    .achievement-card {
+        padding: 1.25rem;
+    }
+    
+    .achievement-card h3 {
+        font-size: 0.95rem;
+    }
+    
+    .achievement-card p {
+        font-size: 0.85rem;
     }
 }
 
