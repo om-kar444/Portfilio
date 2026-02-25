@@ -26,9 +26,9 @@ const transporter = nodemailer.createTransport({
 // Contact form endpoint
 app.post('/send-email', async (req, res) => {
     try {
-        const { name, email, subject, message } = req.body;
+        const { name, email, designation, subject, message } = req.body;
 
-        if (!name || !email || !subject || !message) {
+        if (!name || !email || !designation || !subject || !message) {
             return res.status(400).json({
                 success: false,
                 message: 'All fields are required'
