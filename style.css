@@ -959,11 +959,14 @@ footer {
     }
     
     .about-container {
-        padding: 0 1rem;
+        padding: 0;
+        max-width: 100%;
     }
     
     .about-box {
         padding: 1.5rem;
+        max-width: 100%;
+        margin: 0;
     }
     
     .about-box p {
@@ -1031,6 +1034,8 @@ footer {
     
     .about-box {
         padding: 1.25rem;
+        max-width: 100%;
+        margin: 0;
     }
     
     .about-box p {
