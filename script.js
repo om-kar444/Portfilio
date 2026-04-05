@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const formMessage = document.getElementById('form-message');
 
     if (contactForm) {
-        contactForm.addEventListener('submit', async function(e) {
+        contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
 
             const submitBtn = contactForm.querySelector('.submit-btn');
@@ -247,20 +247,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 message: document.getElementById('message').value
             };
 
-            try {
-                // Simulate form submission for demo purposes
-                // In production, you would connect this to your backend
-                
+            // Simulate processing time
+            setTimeout(() => {
                 // Show success message
                 formMessage.className = 'form-message success';
-                formMessage.textContent = 'Thank you for your message! Please email me directly at omkarkurane141@gmail.com for now.';
+                formMessage.textContent = 'Thank you for your message! Please email me directly at omkarkurane141@gmail.com';
                 contactForm.reset();
-
-            } catch (error) {
-                console.error('Error:', error);
-                formMessage.className = 'form-message error';
-                formMessage.textContent = 'Please email me directly at omkarkurane141@gmail.com';
-            } finally {
+                
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
                 formMessage.style.display = 'block';
@@ -269,7 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => {
                     formMessage.style.display = 'none';
                 }, 5000);
-            }
+            }, 1000);
         });
     }
 
