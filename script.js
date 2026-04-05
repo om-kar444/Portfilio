@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const formMessage = document.getElementById('form-message');
 
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
 
             const submitBtn = contactForm.querySelector('.submit-btn');
@@ -247,13 +247,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 message: document.getElementById('message').value
             };
 
-            // Simulate processing time
-            setTimeout(() => {
-                // Show success message
-                formMessage.className = 'form-message success';
-                formMessage.textContent = 'Thank you for your message! Please email me directly at omkarkurane141@gmail.com';
-                contactForm.reset();
-                
+            try {
+                const response = await fetch('/send-email', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    formMessage.className = 'form-message success';
+                    formMessage.textContent = 'Message sent successfully! I will get back to you soon.';
+                    contactForm.reset();
+                } else {
+                    formMessage.className = 'form-message error';
+                    formMessage.textContent = data.message || 'Failed to send message. Please try again.';
+                }
+
+            } catch (error) {
+                console.error('Error:', error);
+                formMessage.className = 'form-message error';
+                formMessage.textContent = 'Failed to send message. Please email me directly at omkarkurane141@gmail.com';
+            } finally {
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
                 formMessage.style.display = 'block';
@@ -262,7 +280,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => {
                     formMessage.style.display = 'none';
                 }, 5000);
-            }, 1000);
+            }
         });
     }
 
