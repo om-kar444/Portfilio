@@ -248,29 +248,18 @@ document.addEventListener('DOMContentLoaded', () => {
             };
 
             try {
-                const response = await fetch('http://localhost:3000/send-email', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(formData)
-                });
-
-                const data = await response.json();
-
-                if (data.success) {
-                    formMessage.className = 'form-message success';
-                    formMessage.textContent = 'Message sent successfully! I will get back to you soon.';
-                    contactForm.reset();
-                } else {
-                    formMessage.className = 'form-message error';
-                    formMessage.textContent = data.message || 'Failed to send message. Please try again.';
-                }
+                // Simulate form submission for demo purposes
+                // In production, you would connect this to your backend
+                
+                // Show success message
+                formMessage.className = 'form-message success';
+                formMessage.textContent = 'Thank you for your message! Please email me directly at omkarkurane141@gmail.com for now.';
+                contactForm.reset();
 
             } catch (error) {
                 console.error('Error:', error);
                 formMessage.className = 'form-message error';
-                formMessage.textContent = 'Failed to send message. Please email me directly at omkarkurane141@gmail.com';
+                formMessage.textContent = 'Please email me directly at omkarkurane141@gmail.com';
             } finally {
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
