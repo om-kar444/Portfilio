@@ -221,7 +221,19 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(card);
     });
 
-    // ========== CONTACT FORM ==========
+    // ========== CONTACT FORM WITH EMAILJS ==========
+    // EmailJS Configuration
+    const EMAILJS_PUBLIC_KEY = "cRGgaY37bIJZs4oQG";  // Try shortened version
+    const EMAILJS_SERVICE_ID = "service_ecpgwln";
+    const EMAILJS_TEMPLATE_ID = "template_drz2i4u";
+    
+    // Initialize EmailJS
+    emailjs.init({
+        publicKey: EMAILJS_PUBLIC_KEY,
+    });
+    
+    console.log('EmailJS initialized with public key:', EMAILJS_PUBLIC_KEY);
+    
     const contactForm = document.getElementById('contact-form');
     const formMessage = document.getElementById('form-message');
 
@@ -239,7 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
             formMessage.style.display = 'none';
 
             // Get form data
-            const formData = {
+            const params = {
                 name: document.getElementById('name').value,
                 email: document.getElementById('email').value,
                 designation: document.getElementById('designation').value,
@@ -247,30 +259,30 @@ document.addEventListener('DOMContentLoaded', () => {
                 message: document.getElementById('message').value
             };
 
+            console.log('Sending email with params:', params);
+            console.log('Using Service ID:', EMAILJS_SERVICE_ID);
+            console.log('Using Template ID:', EMAILJS_TEMPLATE_ID);
+
             try {
-                const response = await fetch('/send-email', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(formData)
-                });
-
-                const data = await response.json();
-
-                if (data.success) {
-                    formMessage.className = 'form-message success';
-                    formMessage.textContent = 'Message sent successfully! I will get back to you soon.';
-                    contactForm.reset();
-                } else {
-                    formMessage.className = 'form-message error';
-                    formMessage.textContent = data.message || 'Failed to send message. Please try again.';
-                }
+                // Send email using EmailJS
+                const result = await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params);
+                console.log('EmailJS Success:', result);
+                
+                formMessage.className = 'form-message success';
+                formMessage.textContent = 'Message sent successfully! I will get back to you soon.';
+                contactForm.reset();
 
             } catch (error) {
-                console.error('Error:', error);
+                console.error('EmailJS Error:', error);
+                console.error('Error status:', error.status);
+                console.error('Error text:', error.text);
+                
                 formMessage.className = 'form-message error';
-                formMessage.textContent = 'Failed to send message. Please email me directly at omkarkurane141@gmail.com';
+                if (error.status === 400) {
+                    formMessage.textContent = 'Email configuration error. Please email me directly at omkarkurane141@gmail.com';
+                } else {
+                    formMessage.textContent = 'Failed to send message. Please try again or email me directly at omkarkurane141@gmail.com';
+                }
             } finally {
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
