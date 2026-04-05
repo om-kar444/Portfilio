@@ -245,7 +245,7 @@ section {
 .hero-buttons {
     display: flex;
     gap: 1rem;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     margin-top: 1rem;
 }
@@ -255,7 +255,6 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
     position: relative;
     background: 
         linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)),
@@ -273,6 +272,30 @@ section {
             rgba(99, 102, 241, 0.02) 10px,
             rgba(99, 102, 241, 0.02) 20px
         );
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.hero-image {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .hero-greeting {
@@ -304,7 +327,6 @@ section {
     margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 0.5rem;
 }
 
@@ -329,7 +351,7 @@ section {
 .hero-social-links {
     display: flex;
     gap: 1.5rem;
-    justify-content: center;
+    justify-content: flex-start;
     margin-bottom: 2rem;
 }
 
@@ -368,7 +390,6 @@ section {
 .hero-contact-info p {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 0.5rem;
 }
 
@@ -383,14 +404,15 @@ section {
     font-weight: 600;
 }
 .profile-image {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
+    width: 240px;
+    height: 300px;
+    border-radius: 12px;
     border: 4px solid var(--primary-color);
     box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
-    margin-bottom: 1.5rem;
+    margin-bottom: 0;
     animation: glow-pulse 6s infinite ease-in-out;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
+    object-fit: cover;
 }
 
 .profile-image:hover {
@@ -836,6 +858,35 @@ footer {
     section {
         padding: 4rem 2rem;
     }
+    
+    /* Hero section responsive */
+    .hero-content {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+        padding: 0 1rem;
+    }
+    
+    .hero-text {
+        text-align: center;
+    }
+    
+    .hero-social-links {
+        justify-content: center;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .college-name {
+        justify-content: center;
+    }
+    
+    .hero-contact-info p {
+        justify-content: center;
+    }
+    
     .timeline::after {
         left: 20px;
     }
@@ -899,7 +950,7 @@ footer {
     
     .profile-image {
         width: 180px;
-        height: 180px;
+        height: 225px;
     }
     
     .section-title {
@@ -1018,7 +1069,7 @@ footer {
     
     .profile-image {
         width: 150px;
-        height: 150px;
+        height: 190px;
     }
     
     .hero-social-links a {
