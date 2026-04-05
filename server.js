@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -25,19 +26,24 @@ const transporter = nodemailer.createTransport({
 
 // Contact form endpoint
 app.post('/send-email', async (req, res) => {
+    console.log('Received email request:', req.body);
+    
     try {
         const { name, email, designation, subject, message } = req.body;
 
         if (!name || !email || !designation || !subject || !message) {
+            console.log('Missing required fields');
             return res.status(400).json({
                 success: false,
                 message: 'All fields are required'
             });
         }
 
+        console.log('Attempting to send email...');
+
         const mailOptions = {
-            from: "omkarkurane141@gmail.com",
-            to: "omkarkurane141@gmail.com",
+            from: process.env.EMAIL_USER || "omkarkurane141@gmail.com",
+            to: process.env.EMAIL_USER || "omkarkurane141@gmail.com",
             subject: `Portfolio Contact: ${subject}`,
             html: `
                 <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
@@ -61,7 +67,8 @@ app.post('/send-email', async (req, res) => {
             `
         };
 
-        await transporter.sendMail(mailOptions);
+        const result = await transporter.sendMail(mailOptions);
+        console.log('Email sent successfully:', result.messageId);
 
         res.status(200).json({
             success: true,
@@ -72,7 +79,8 @@ app.post('/send-email', async (req, res) => {
         console.error('Error sending email:', error);
         res.status(500).json({
             success: false,
-            message: 'Failed to send message. Please try again later.'
+            message: 'Failed to send message. Please try again later.',
+            error: error.message
         });
     }
 });
