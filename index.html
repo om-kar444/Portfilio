@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+<!-- Animated Network Background -->
+<canvas id="network-canvas" class="network-background" style="display: none;"></canvas>
+<button class="sidebar-toggle" aria-label="Toggle navigation">
+    <i class="fas fa-bars"></i>
+</button>
+
+<nav class="sidebar" data-collapsed="false">
+    <div class="sidebar-header">
+        <h3>My Portfolio</h3>
+        <button class="sidebar-toggle close-btn" aria-label="Toggle navigation">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+    </div>
+    <ul>
+        <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i><span>Home</span></a></li>
+        <li><a href="#about" class="nav-link"><i class="fas fa-user"></i><span>About</span></a></li>
+        <li><a href="#education" class="nav-link"><i class="fas fa-graduation-cap"></i><span>Education</span></a></li>
+        <li><a href="#experience" class="nav-link"><i class="fas fa-briefcase"></i><span>Experience</span></a></li>
+        <li><a href="#skills" class="nav-link"><i class="fas fa-cogs"></i><span>Technical Skills</span></a></li>
+        <li><a href="#achievements" class="nav-link"><i class="fas fa-trophy"></i><span>Certifications</span></a></li>
+        <li><a href="#projects" class="nav-link"><i class="fas fa-project-diagram"></i><span>Featured Projects</span></a></li>
+        <li><a href="#services" class="nav-link"><i class="fas fa-concierge-bell"></i><span>Services</span></a></li>
+        <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+    </ul>
+</nav>
+
+<main id="main-content">
+    <!-- Home Section -->
+    <section id="home" class="full-screen">
+        <div class="hero-content">
+            <div class="hero-image">
+                <img src="profile-image.jpeg" alt="Profile Image" class="profile-image" data-aos="zoom-in">
+            </div>
+            
+            <div class="hero-text">
+                <p class="hero-greeting" data-aos="fade-down">Hello, I am</p>
+                
+                <h2 class="hero-name" data-aos="fade-down">Omkar V Kurane</h2>
+                
+                <p class="hero-subtitle" data-aos="fade-down" data-aos-delay="50">
+                    Full Stack Developer
+                </p>
+                
+                <p class="college-name" data-aos="fade-down" data-aos-delay="100">
+                    <i class="fas fa-graduation-cap"></i> Maratha Mandal Engineering College, Belagavi
+                </p>
+                
+                <div class="hero-contact-info" data-aos="fade-up" data-aos-delay="150">
+                    <p><i class="fas fa-envelope"></i> omkarkurane141@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Bangalore, Karnataka, India</p>
+                </div>
+                
+                <p class="hero-tagline" data-aos="fade-up" data-aos-delay="200">
+                    <span class="typing"></span>
+                </p>
+                
+                <div class="hero-social-links" data-aos="fade-up" data-aos-delay="250">
+                    <a href="https://www.linkedin.com/in/omkar-kurane-66594425b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/om-kar444" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+                
+                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-briefcase"></i> View My Work
+                    </a>
+                    <a href="Resume.pdf" class="btn btn-secondary" download>
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title" data-aos="fade-right">About Me</h2>
+        <div class="about-container">
+            <div class="about-box" data-aos="fade-up">
+                <p>
+                    I am <strong>Omkar Kurane</strong>, an engineering aspirant passionate about innovation,
+                    problem-solving, and continuous learning. I believe in creating, experimenting, failing,
+                    rebuilding, and ultimately succeeding. My approach to growth is rooted in learning by doing,
+                    embracing trial and error as a pathway to mastery.
+                </p>
+
+                <p>
+                    Currently, I am focused on <strong>AI-driven projects</strong> that address real-world
+                    challenges, with a strong interest in sectors such as <strong>healthcare</strong> and
+                    <strong>education</strong>. My goal is to leverage technology to create impactful solutions
+                    that improve lives and drive progress.
+                </p>
+
+                <p>
+                    Some of these initiatives are highlighted in my <a href="#projects">Projects</a> section,
+                    reflecting my commitment to using engineering and AI to make a meaningful difference.
+                </p>
+
+                <p><strong>Hackathons:</strong> Participated in 4 zonal-level and 1 national-level hackathon, improving skills in rapid prototyping, teamwork, and innovative problem-solving.</p>
+
+                <p><strong>FKCCI Manthan:</strong> Participated in the Business Plan Competition (Bengaluru), organized by the Federation of Karnataka Chambers of Commerce & Industry (FKCCI).</p>
+
+                <p><strong>Research Paper Presentation:</strong> Participated in National Level Research Paper Presentation Conference organized by VTU in Belagavi.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2 class="section-title" data-aos="fade-right">Education</h2>
+        <div class="education-container">
+            <div class="education-card" data-aos="fade-up">
+                <div class="education-icon">
+                    <i class="fas fa-university"></i>
+                </div>
+                <div class="education-content">
+                    <h3>Bachelor of Engineering</h3>
+                    <p class="institution">Maratha Mandal Engineering College, Belagavi</p>
+                    <p class="duration"><i class="fas fa-calendar-alt"></i> December 2022 - Present</p>
+                    <p class="description">Pursuing Engineering degree with focus on full-stack development and AI-driven projects.</p>
+                </div>
+            </div>
+
+            <div class="education-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="education-icon">
+                    <i class="fas fa-school"></i>
+                </div>
+                <div class="education-content">
+                    <h3>Pre-University Course (PUC)</h3>
+                    <p class="institution">Sanjay Ghodawat Academy, Belagavi</p>
+                    <p class="duration"><i class="fas fa-calendar-alt"></i> June 2020 - March 2022</p>
+                    <p class="description">Completed pre-university education with strong foundation in science and mathematics.</p>
+                </div>
+            </div>
+
+            <div class="education-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="education-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="education-content">
+                    <h3>10th Standard (SSLC)</h3>
+                    <p class="institution">Maratha Mandal English Medium School, Belagavi</p>
+                    <p class="duration"><i class="fas fa-calendar-alt"></i> June 2010 - March 2020</p>
+                    <p class="description">Completed secondary education with strong academic performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience Section -->
+    <section id="experience">
+        <h2 class="section-title" data-aos="fade-right">Professional Experience</h2>
+        <div class="experience-container">
+            <div class="experience-card" data-aos="fade-up">
+                <div class="experience-header">
+                    <h3>Java Full Stack Developer Intern</h3>
+                    <span class="experience-duration">February 2026 - June 2026</span>
+                </div>
+                <p class="company-name">EchoBrains | A Dextris Company</p>
+                <p class="location"><i class="fas fa-map-marker-alt"></i> Onsite - Bangalore, Karnataka, India</p>
+                <ul class="experience-details">
+                    <li>Developed admin, mentor, and student dashboards on a live LMS using React.js and MongoDB to track performance and surface insights.</li>
+                    <li>Built an AI/Gen AI-powered FAQ chatbot with Spring AI and NLP, reducing support tickets by automating repetitive queries.</li>
+                    <li>Designed RESTful APIs and microservices for the React.js frontend with optimised query handling and connection pooling.</li>
+                    <li>Managed CI/CD pipelines with Jenkins and Git & GitHub, following branching strategies and collaborative PR workflows.</li>
+                </ul>
+            </div>
+
+            <div class="experience-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="experience-header">
+                    <h3>Full Stack Developer Intern</h3>
+                    <span class="experience-duration">January 2026 - June 2026</span>
+                </div>
+                <p class="company-name">Prinstone Smart Engineers</p>
+                <p class="location"><i class="fas fa-laptop-house"></i> Remote - Bangalore, Karnataka, India</p>
+                <ul class="experience-details">
+                    <li>Built full-stack web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js) with RESTful APIs.</li>
+                    <li>Developed responsive UI with React.js; managed state, routing, and backend integration with Express.js and MongoDB.</li>
+                    <li>Integrated Generative AI via OpenRouter API, enabling smart recommendations and automated content generation.</li>
+                    <li>Built an AI-Based Diet & Fitness Planner delivering personalised meal and fitness plans from user inputs at 85% accuracy.</li>
+                    <li>Maintained source code with Git & GitHub following branching strategies and collaborative PR workflows.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title" data-aos="fade-right">Technical Skills</h2>
+        <div class="skills-container">
+            <!-- Languages -->
+            <div class="skill-category" data-aos="fade-up">
+                <h3>Languages</h3>
+                <div class="skill-items">
+                    <span class="skill-item">Java (8, 11, 17, 21)</span>
+                    <span class="skill-item">JavaScript</span>
+                    <span class="skill-item">Python</span>
+                    <span class="skill-item">HTML5</span>
+                    <span class="skill-item">CSS3</span>
+                    <span class="skill-item">PL/SQL</span>
+                </div>
+            </div>
+
+            <!-- Concepts -->
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="50">
+                <h3>Concepts</h3>
+                <div class="skill-items">
+                    <span class="skill-item">OOPs (4 Pillars, Constructor Chaining)</span>
+                    <span class="skill-item">DSA (Arrays, Strings)</span>
+                    <span class="skill-item">Exception Handling</span>
+                    <span class="skill-item">Multithreading</span>
+                    <span class="skill-item">Streams & Lambdas</span>
+                    <span class="skill-item">JDBC</span>
+                    <span class="skill-item">Maven</span>
+                    <span class="skill-item">Gradle</span>
+                    <span class="skill-item">Microservices</span>
+                    <span class="skill-item">REST APIs</span>
+                    <span class="skill-item">WebSocket</span>
+                    <span class="skill-item">JWT</span>
+                    <span class="skill-item">Linux</span>
+                </div>
+            </div>
+
+            <!-- Frameworks -->
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                <h3>Frameworks</h3>
+                <div class="skill-items">
+                    <span class="skill-item">Spring Boot</span>
+                    <span class="skill-item">Spring AI</span>
+                    <span class="skill-item">Servlets</span>
+                    <span class="skill-item">JSP</span>
+                    <span class="skill-item">Hibernate</span>
+                    <span class="skill-item">JPA</span>
+                    <span class="skill-item">Flask</span>
+                    <span class="skill-item">React.js</span>
+                    <span class="skill-item">Node.js</span>
+                    <span class="skill-item">Express.js</span>
+                    <span class="skill-item">Tailwind CSS</span>
+                </div>
+            </div>
+
+            <!-- Databases -->
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="150">
+                <h3>Databases</h3>
+                <div class="skill-items">
+                    <span class="skill-item">MySQL</span>
+                    <span class="skill-item">PostgreSQL</span>
+                    <span class="skill-item">MongoDB</span>
+                </div>
+            </div>
+
+            <!-- Cloud/DevOps -->
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                <h3>Cloud & DevOps</h3>
+                <div class="skill-items">
+                    <span class="skill-item">AWS (EC2, S3, IAM)</span>
+                    <span class="skill-item">Jenkins</span>
+                    <span class="skill-item">CI/CD Pipelines</span>
+                </div>
+            </div>
+
+            <!-- Testing -->
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="250">
+                <h3>Testing</h3>
+                <div class="skill-items">
+                    <span class="skill-item">JUnit</span>
+                    <span class="skill-item">Mockito</span>
+                    <span class="skill-item">Postman</span>
+                </div>
+            </div>
+
+            <!-- Gen AI & Tools -->
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                <h3>Gen AI & Tools</h3>
+                <div class="skill-items">
+                    <span class="skill-item">Generative AI (OpenRouter, Gemini)</span>
+                    <span class="skill-item">LangChain</span>
+                    <span class="skill-item">RAG</span>
+                    <span class="skill-item">Prompt Engineering</span>
+                    <span class="skill-item">LLM Fine-Tuning</span>
+                    <span class="skill-item">Git & GitHub</span>
+                    <span class="skill-item">IntelliJ IDEA</span>
+                    <span class="skill-item">VS Code</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements">
+        <h2 class="section-title" data-aos="fade-right">Certifications</h2>
+        <div class="achievements-grid">
+            <!-- Certifications -->
+            <div class="achievement-card" data-aos="fade-up">
+                <i class="fas fa-certificate"></i>
+                <h3>Core Java – ScholarHat</h3>
+                <p>Aug 2024</p>
+            </div>
+
+            <div class="achievement-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-certificate"></i>
+                <h3>Linux Workshop – upGrad @ MMEC</h3>
+                <p>Aug 2024</p>
+            </div>
+
+            <div class="achievement-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-certificate"></i>
+                <h3>Web Development Workshop – upGrad @ MMEC</h3>
+                <p>Aug 2023</p>
+            </div>
+
+            <!-- Hackathons -->
+            <div class="achievement-card" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-code"></i>
+                <h3>Hack to Future '24 – KLS GIT</h3>
+                <p>24-hr Hackathon Participant, Jun 2024</p>
+            </div>
+
+            <div class="achievement-card" data-aos="fade-up" data-aos-delay="400">
+                <i class="fas fa-users"></i>
+                <h3>Clash of Codes '24 – IEEE</h3>
+                <p>Team Lead, Apparel Rental E-commerce, Dec 2024</p>
+            </div>
+
+            <div class="achievement-card" data-aos="fade-up" data-aos-delay="500">
+                <i class="fas fa-chart-line"></i>
+                <h3>Hack to Intern – TechVritti | VTU</h3>
+                <p>Solo Project: Data Visualization Tool, Nov 2024</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title" data-aos="fade-right">Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card" data-aos="fade-up">
+                <div class="project-info">
+                    <h3>1. AI-Based Diet & Fitness Planner</h3>
+                    <p class="project-period">January - May 2025</p>
+                    <p class="tech-stack-label">Java, Spring Boot, Gen AI, JWT, React.js, MySQL</p>
+                    <ul class="project-details">
+                        <li>Implemented Generative AI-powered personalised meal plan generation from user inputs (age, weight, symptoms, allergies) at 85% accuracy.</li>
+                        <li>Built a secure full-stack platform with JWT authentication and role-based access control using Java Servlets and JDBC.</li>
+                        <li>Reduced AI API costs by 30% via prompt chunking and response optimisation using OpenRouter while sustaining accuracy.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-info">
+                    <h3>2. InsightHub – AI Data Visualization Tool</h3>
+                    <p class="project-period">April - July 2025</p>
+                    <p class="tech-stack-label">Java, Spring Boot, Gen AI, React.js, Chart.js, D3.js</p>
+                    <ul class="project-details">
+                        <li>Integrated a Generative AI chatbot achieving 85% query interpretation accuracy, auto-suggesting chart types and visualisations.</li>
+                        <li>Engineered a Spring Boot RESTful backend to process natural language queries and parse CSV/JSON datasets via a key-value extraction pipeline.</li>
+                        <li>Implemented bar, line, pie, and scatter chart renderers via Chart.js and D3.js with export functionality for downstream reporting.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-info">
+                    <h3>3. LMS System – EchoBrains</h3>
+                    <p class="project-period">February 2026 - Present</p>
+                    <p class="tech-stack-label">React.js, Node.js, MongoDB, Tailwind CSS, Gen AI, Git & GitHub</p>
+                    <ul class="project-details">
+                        <li>Developed admin, student, and mentor dashboards to track learner performance, visualise progress, and surface actionable insights.</li>
+                        <li>Integrated an AI/Gen AI-powered FAQ chatbot via OpenRouter for instant, context-aware answers, reducing manual support overhead.</li>
+                        <li>Built an automated test engine for assessments; designed responsive UI with Tailwind CSS backed by a Node.js/MongoDB backend.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2 class="section-title" data-aos="fade-right">Services</h2>
+        <div class="services-container" data-aos="zoom-in">
+            <iframe src="ai_dev_services_poster_v4.html" class="services-iframe" frameborder="0" scrolling="no"></iframe>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title" data-aos="fade-right">Get In Touch</h2>
+        <div class="contact-container">
+            <p class="contact-intro" data-aos="fade-up">
+                Have a project in mind or want to collaborate? Feel free to reach out!
+            </p>
+            <form id="contact-form" class="contact-form" data-aos="fade-up" data-aos-delay="100">
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" autocomplete="name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" autocomplete="email" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <select id="designation" name="designation" autocomplete="organization-title" required>
+                            <option value="">Select Your Role</option>
+                            <option value="HR">HR</option>
+                            <option value="Recruiter">Recruiter</option>
+                            <option value="Founder">Founder/CEO</option>
+                            <option value="Student">Student</option>
+                            <option value="Developer">Developer</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" autocomplete="off" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message" autocomplete="off" required></textarea>
+                </div>
+                
+                <div class="form-buttons">
+                    <button type="submit" class="btn submit-btn">Send Message</button>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=omkarkurane141@gmail.com" target="_blank" class="btn btn-mail" title="Send via Gmail">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                <p id="form-message" class="form-message"></p>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/omkar-kurane-66594425b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" aria-label="LinkedIn" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/om-kar444" aria-label="GitHub" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="#" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+        <p>&copy; 2024 Omkar Kurane. All Rights Reserved.</p>
+    </footer>
+</main>
+
+<!-- Chatbot Button and Popup -->
+<div class="chatbot-button" id="chatbotBtn" aria-label="Open chatbot">
+    <i class="fas fa-comments"></i>
+</div>
+
+<div class="chatbot-popup" id="chatbotPopup">
+    <div class="chatbot-header">
+        <h3>Ask me anything</h3>
+        <div class="chatbot-header-buttons">
+            <button class="chatbot-clear" id="chatbotClear" aria-label="Clear chat" title="Clear chat">
+                <i class="fas fa-trash-alt"></i>
+            </button>
+            <button class="chatbot-close" id="chatbotClose" aria-label="Close chatbot">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+    <div class="chatbot-messages" id="chatMessages"></div>
+    <div class="chatbot-input-area">
+        <input 
+            type="text" 
+            id="chatInput" 
+            placeholder="Type your message..." 
+            class="chatbot-input"
+        >
+        <button class="chatbot-send" id="chatSend" aria-label="Send message">
+            <i class="fas fa-paper-plane"></i>
+        </button>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="script.js"></script>
+<script src="chatbot.js"></script>
+</body>
+</html>
