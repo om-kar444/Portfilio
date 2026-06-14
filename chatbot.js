@@ -205,7 +205,8 @@ Question: ${message}`;
         },
         body: JSON.stringify({
             model: MODEL,
-            messages: [{ role: "user", content: prompt }]
+            messages: [{ role: "user", content: prompt }],
+            max_tokens: 500
         })
     });
 
